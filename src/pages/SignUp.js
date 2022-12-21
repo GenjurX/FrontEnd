@@ -37,7 +37,7 @@ return (
                 <input type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
                 <label htmlFor="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Choose your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" title="Must contain at least one number and one special character, and 5-12 characters"/> 
-                <p>Are you already a user ? <a href='log-in'>Login</a></p>
+                <p>Are you already a user ? <a href='/'>Login</a></p>
                 <button type="submit" className="button_submit" name="submit">Create Account</button>
                 {error?<p>Password is not valid, insert at least 1 number and 1 symbol (! : ; )</p>:null}
             </form>

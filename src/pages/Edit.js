@@ -1,19 +1,18 @@
 import React from 'react';
 import { useState} from 'react';
 import { Link } from 'react-router-dom';
-//import {Link, useNavigate} from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 export const Edit = () => {
-
+    
     const [errorEmail, setErrorEmail] = useState(false);
     const [errorPassword, setErrorPassword] = useState(false);
     const [successEmail, setSuccessEmail] = useState('');
     const [successPassword, setSuccesPassword] = useState('');
-
     const id = localStorage.getItem('user_id');
     const passwordLogedin = localStorage.getItem('password');
-
 
     const updateEmail = async (e) => {
         e.preventDefault();
@@ -28,24 +27,21 @@ export const Edit = () => {
                 }, body: JSON.stringify(value)
             })
 
-            const data = await response.json();
-            if (response.OK) {
-               console.log(data);
-               setSuccessEmail(data);
+       const data = await response.json();
+        if (response.OK) {
+            setSuccessEmail(data);
             }
-            else {
-            console.log(data);
+        else {
             setErrorEmail(data);
-            } 
+          } 
         }
         catch (err) {
-            setErrorEmail(err.message);
+            setErrorEmail( err.message );
         }
 
     }
-
-
-    const updatePassword = async (e) => {
+      
+       const updatePassword = async (e) => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
@@ -78,10 +74,12 @@ export const Edit = () => {
         }
     }
 
+ 
+
   return (
 
     <div>
-        
+       <Navbar />
         <div className='my-3 mx-auto p-3 ml-5 d-flex flex-column container w-75 bg-white rounded'>
           <h2>Personal information</h2>
           <form onSubmit={updateEmail} className='my-2 d-flex flex-column' >
@@ -115,7 +113,7 @@ export const Edit = () => {
         {(successEmail) ? <p className='text-success'>You have successfully changed your email to: {successEmail}</p> : <p className='text-danger'>{errorEmail}</p> }
         {(successPassword) ?<p className='text-success'>You have successfully changed your password to: {successPassword}</p> : <p className='text-danger'>{errorPassword}</p>}
         </div>
-        
+        <Footer />
     </div>
 
   )

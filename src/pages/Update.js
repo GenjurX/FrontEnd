@@ -1,11 +1,10 @@
 import React,{useState} from "react";
-import { useNavigate } from 'react-router-dom'
-
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 function Update(){
     const [ latitude, setLat ] = useState('')
     const [ longitude, setLon ] = useState('')
     const id_trip = localStorage.getItem( 'id' );
-    const navigate = useNavigate()
     let lat = ''
     let lon = ''
 
@@ -43,20 +42,10 @@ async function  onSubmit(e) {
    
     }
 
-    function onLogOut() {
-        navigate( '/' ); 
-        window.localStorage.clear();
-    }
     
-      function goToHomePage(){
-        navigate( '/trips' ); 
-    }
-
     return(
         <div className="updateBody">
-        <nav>
-            <h1>My trips <span>diary</span></h1>  <span className="myTrips">My trips</span> <span  className="svg"><svg onClick={goToHomePage} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20zm-10-7v6h2v-6h-2z"/></svg></span><span className="svg"><svg onClick={onLogOut} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z"/></svg></span>
-            </nav>
+        <Navbar />
             <h2 className="tripHeader">Update trip #{id_trip}</h2>
             <div className="mandatoryDiv">You must fill all the mandatory list</div>
             <form onSubmit = { onSubmit } id ='form'>
@@ -88,9 +77,7 @@ async function  onSubmit(e) {
                   
                  <button className="UpdateButton" type ={'submit'}>Update</button> <button className="CancelButton" type={"button"}>Cancel</button>
             </form>
-         <footer>  
-         <h1>My trips <span>diary</span></h1>
-         </footer>
+       <Footer />
        </div>
       )
 }
