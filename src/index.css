@@ -277,4 +277,81 @@ height: 3rem;
   width: 100%;
   height: 500px;
 }
+/*Edit.js*/
+.email {
+  position: relative; 
+  background-color: white;
+  width: 75%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 25px;
+}
 
+
+.password {
+  position: relative; 
+  background-color: white;
+  width: 75%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.emailForm {
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
+.emailInput {
+  margin-top: 5px;
+  margin-left: -100px;
+  width: 250px;
+}
+
+.right {
+ margin-top: 20px;
+ text-align: right;
+ justify-content: end;
+}
+.passwordForm {
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 200px;
+}
+
+
+.text-red-center {
+  margin-top: 10px;
+  text-align: center;
+  color: red;
+}
+
+.flex-password {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.flex-column-password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.flex-column-password label {
+  font-size: medium;
+  font-weight: bold;
+}
+.flex-column-password input {
+  width: 250px;
+  padding: 10px;
+}

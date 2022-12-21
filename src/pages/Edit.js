@@ -74,47 +74,47 @@ export const Edit = () => {
         }
     }
 
- 
+
 
   return (
 
     <div>
-       <Navbar />
-        <div className='my-3 mx-auto p-3 ml-5 d-flex flex-column container w-75 bg-white rounded'>
-          <h2>Personal information</h2>
-          <form onSubmit={updateEmail} className='my-2 d-flex flex-column' >
-            <label className='my-2'>Email</label>
-            <input type='text' name='email' placeholder='john.doe@gmail.com' className='border w-72 p-2'/>
-            <div className='text-right'>
-            <button type='submit' className='btn btn-secondary w-20 mt-2'>Save</button>
-            </div>
-          </form>
+    <Navbar />
+    <div className='email'>
+      <h2>Personal information</h2>
+      <form onSubmit={updateEmail} className='emailForm'>
+        <label className=''>Email</label>
+        <input type='text' name='email' placeholder='john.doe@gmail.com' className='emailInput'/>
+        <div className='right'>
+        <button type='submit'>Save</button>
         </div>
-        <div className="mx-auto p-3 ml-5 d-flex flex-column container w-75 bg-white rounded">
-          <h2>Security</h2>
-          <h3>Password</h3>
-          <form onSubmit={updatePassword} className='my-2 d-flex flex-column'>
-            <div className='d-flex'>
-              <div className='d-flex flex-column'>
-               <label className='font-bold mb-2'>Current password</label>
-               <input type='text' name='currentPassword' placeholder='Insert current password' className='border w-72 p-2'/>
-              </div>
-              <div className='d-flex flex-column ml-10'>
-               <label className='font-bold mb-2'>New Password</label>
-               <input type='text' name='newPassword' placeholder='Insert new password' className='border w-72 p-2'/>
-              </div>
-            </div>
-            <div className='text-right'>
-            <button type='submit' className='btn btn-secondary w-20 mt-2'>Save</button>
-            </div>
-          </form>
-        </div>
-        <div className='bg-white my-1 text-center w-3/4 mx-auto'>
-        {(successEmail) ? <p className='text-success'>You have successfully changed your email to: {successEmail}</p> : <p className='text-danger'>{errorEmail}</p> }
-        {(successPassword) ?<p className='text-success'>You have successfully changed your password to: {successPassword}</p> : <p className='text-danger'>{errorPassword}</p>}
-        </div>
-        <Footer />
+      </form>
     </div>
+    <div className='password'>
+      <h2>Security</h2>
+      <h3>Password</h3>
+      <form onSubmit={updatePassword} className='passwordForm'>
+        <div className='flex-password'>
+          <div className='flex-column-password'>
+           <label>Current password</label>
+           <input type='text' name='currentPassword' placeholder='Insert current password' />
+          </div>
+          <div className='flex-column-password'>
+           <label>New Password</label>
+           <input type='text' name='newPassword' placeholder='Insert new password' />
+          </div>
+        </div>
+        <div className='right'>
+        <button type='submit' >Save</button>
+        </div>
+      </form>
+    </div>
+    <div className='text-red-center'>
+    {(successEmail) ? <p>You have successfully changed your email to: {successEmail}</p> : <p>{errorEmail}</p> }
+    {(successPassword) ?<p>You have successfully changed your password to: {successPassword}</p> : <p>{errorPassword}</p>}
+    </div>
+    <Footer />
+</div>
 
   )
 }
