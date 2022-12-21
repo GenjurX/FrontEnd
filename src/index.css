@@ -1,0 +1,277 @@
+body {
+  font-family: Verdana;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 500px;
+}
+body{
+  background-color: rgb(217, 217, 234);
+  height: fit-content;
+  padding-bottom: 5%;
+}
+
+/* /trips*/
+
+.tripsDiaryPage{
+font-size: 120%;
+margin-top: -0.4%;
+
+}
+
+nav h1 {
+  margin-left: 4%;
+}
+nav h1 span{
+ color: grey; 
+}
+nav .myTrips{
+  margin-left: 75%;
+  margin-top: 1.5%;
+}
+nav .svg{
+  margin-top: 1.5%;
+  cursor: pointer;
+  margin-left: 1%;
+}
+nav{
+  display: flex;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  border-color: rgb(159, 159, 159);
+  background-color: white;
+  margin-left: -1%;
+}
+
+.svgTable{
+  position: absolute;
+  margin-left: -1.5%;
+}
+.svgMap{
+  position: absolute;
+  margin-left: -1.5%;
+}
+.tripsDiaryPage .buttonContainer button{
+margin-left: 20px;
+padding: 15px;
+padding-left: 35px;
+padding-right: 35px;
+cursor: pointer;
+color: grey;
+width: 15%;
+font-size: 18px;
+border-radius: 25%;
+border-color: rgb(213, 203, 203)
+}
+
+.tripsDiaryPage .buttonContainer{
+margin-top: 5%;
+margin-left: 40%;
+}
+.spanContainer{
+margin-top: 5%;
+margin-left: 10%;
+font-size: 200%;
+border: 1px solid grey;
+padding-top: 2%;
+width: 75%;
+background-color: white;
+padding-bottom: 1.5%;
+}
+
+
+.spanContainer .myTrips{
+  margin-left: 15%;
+  color: black;
+  font-weight: bold;
+  font-size: 80%;
+}
+.spanContainer .newTrip{
+  margin-left: 55%;
+  background-color: rgb(191, 92, 92);
+  color: white;
+  font-size: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+table{
+  margin-left: 5%;
+  text-align: left;
+  margin-top: 1.5%;
+  width: 85%;
+}
+td,th{
+    font-size: 50%;
+    color: rgb(27, 26, 26);
+}
+table th {
+   margin-left: 200px;
+  padding-right: 50%;
+  left: 30%;
+  width: 26%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: left;
+  border-bottom: 1px solid;
+  border-color: rgb(210, 205, 199);
+}
+table td {
+  margin-left: 200px;
+  left: 30%;
+  width: 26%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: left;
+  margin-top: 2%;
+  border-bottom: 1px solid;
+  border-color: rgb(206, 200, 192);
+
+} 
+footer{
+  background-color: rgb(50, 48, 48);
+  text-align: center;
+  bottom: 0;
+  height: 3.5rem;
+  width: 100%;
+  position: fixed;
+}
+
+footer h1{
+  color: white;
+  font-size: 130%; 
+  padding-bottom: 0.3%;
+}
+footer span{
+  color: grey; 
+  font-size: 100%;
+  padding-bottom: 0.8%;
+}
+.update{
+  margin-left: 325%;
+  cursor: pointer;
+}
+.cancel{
+  margin-left: 325%;
+  cursor: pointer;
+}
+.tripsDiaryPage .buttonContainer .clickedColor{
+  background-color: rgb(15, 15, 15);
+  color: white;
+}
+
+/* Update and CreateTrips*/
+
+.tripHeader{
+  text-align: center;
+  margin-top: 2%;
+  padding-bottom: 0%;
+}
+
+.mandatoryDiv{
+  background-color: rgb(192, 122, 192);
+  color:rgb(118, 63, 63);
+  padding: 0.5%;
+  text-align: center;
+  margin-right: 40%;
+  margin-left: 40%;
+}
+.newTripBody{
+  background-color: white;
+  height: 60rem;
+  margin-top: -0.4%;
+}
+.updateBody{
+  background-color: white;
+  height: 60rem;
+  margin-top: -0.4%;
+  width: 100%;
+}
+form{
+  display: flex;
+  flex-direction:column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2%;
+}
+
+input{
+  float: inline-start;
+padding: 1%;
+text-align: left;
+width: 15%;
+}
+
+select{
+  padding: 1%;
+text-align: left;
+width: 17%; 
+}
+label{
+  margin-left: -10%;
+  font-size: 130%;
+  color: rgb(49, 49, 49);
+}
+.buttonForm{
+  padding:0.5%
+}
+form .secondHandInput{
+  width: 7%;
+  margin-left: -10%;
+  
+}
+form .select{
+  width: 9%;
+  margin-left: -10%;
+  
+}
+form .lineUp{
+  margin-top: -2.5%;
+  margin-left: 10%;
+
+}
+
+form .labelUp{
+  margin-top: -2.9%;
+  margin-left: 10%;
+  color: rgb(199, 10, 10);
+}
+
+.UpdateButton{
+  background-color: white;
+  padding: 1.2%;
+  margin-left: -10%;
+  margin-top: 1%;
+  cursor: pointer;
+  width: 10%;
+}
+.CancelButton{
+  background-color: white;
+  padding: 1.2%;
+  margin-top: 29.5%;
+  margin-left: 11%;
+  position: absolute;
+  cursor: pointer;
+  width: 10%;
+}
+
+.CancelButton:hover{
+  background-color: black;
+  color: white;
+}
+.UpdateButton:hover{
+  background-color: black;
+  color: white;
+}
+.describtionInput{
+height: 3rem;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 500px;
+}
+
