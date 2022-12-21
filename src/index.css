@@ -1,7 +1,123 @@
 body {
   font-family: Verdana;
 }
-
+.app-trips{
+  position: absolute;
+  height: 657px;
+  width: 1441px;
+  position: absolute;
+  background-color: #EEF1F5;
+}
+.app-trips nav{
+  position: absolute;
+  width: 1440px;
+  height: 80px;
+  position: absolute;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E5E6;
+}
+.app-trips nav h3{
+  width: 230px;
+  height: 26px;
+  margin-left: 40px;
+  margin-top: 17px;
+  font-family: 'Spartan';
+  font-style: bold;
+  font-weight: 900;
+  font-size: 23.6351px;
+  line-height: 26px;
+  color: #2B2B2B;
+} 
+.app-trips nav h3 span{
+  color: grey;
+}
+.form{
+  position: absolute;
+  width: 1143px;
+  height: 423px;
+  left: 149px;
+  top: 160px;
+  background: #FFFFFF;
+  border-radius: 13px;
+  margin-top: -40px;
+}
+.form h1{
+  width: 100px;
+  height: 29px;
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.261442px;
+  color: #000000;
+}
+.container-input{
+  width: 350px;
+  height: 66px;
+}
+.container-input label{
+  width: 43px;
+  height: 15px;
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+  color: #282828;
+  margin-left: 1px;
+}
+.container-input input{
+  width: 348px;
+  height: 40px;
+  margin-top: 5px;
+}
+.form p{
+  position: absolute;
+  width: 300px;
+  height: 17px;
+  margin-left: -30px;
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 138%;
+  color: #808080;
+  margin-top: 350px;
+}
+.form p a{
+  margin-left: 10px;
+}
+.button_submit{
+  position: absolute;
+  width: 347px;
+  height: 41px;
+  background: #2B2B2B;
+  border-radius: 8px;
+  margin-top: 486px;
+  color: #FFFFFF;
+}
+footer{
+  width: 1441;
+  height: 34px;
+  background-color: #303030;
+  position: absolute;
+}
+footer h2{
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
 .leaflet-container {
   width: 100%;
   height: 500px;

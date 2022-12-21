@@ -1,8 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function LogIn(){
-    const [error,setError] = React.useState(null);
+    const [error,setError] = useState(null);
     const navigate = useNavigate()
     const onSubmit = async (event) => {
       event.preventDefault();
@@ -34,18 +35,29 @@ export default function LogIn(){
       }
     };
       return (
-        <div className="app-title">
-          <form id="login" onSubmit={onSubmit}>
-          <h1>Login</h1>
-          {/* <h2>Please enter your username and password to log in!</h2> */}
-          <label htmlFor="email">Email*:</label>
-          <input type="email" id="email" name="email" placeholder="Choose your email..." required/>
-          <label htmlFor='password' >Password:</label>
-          <input type="password" id="password" name="password" placeholder="Choose your password..." required/>
-          <p>You're not a user yet?<a href="sign-up">Sign up</a></p>
-          <button type="submit" name="submit">Enter</button>
-          {error?<p>Invalid username or password </p>:null}
-          </form>
+        <div className="app-trips">
+            <nav>
+              <h3>My trips <span>diary</span></h3>
+            </nav>
+            <div className='form'>
+              <form id="sign-in" onSubmit={onSubmit}>
+                <h1>Login</h1>
+                  <div className = 'container-input'>
+                    <label htmlFor="email">Email*:</label>
+                    <input type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
+                  </div>
+                  <div className='container-input'>
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Choose your password..." /> 
+                  </div>
+                  {error?<p>Password is not valid, insert at least 1 number and 1 symbol (! : ; )</p>:null}
+                  <p>Are you already a user ? <a href='/sign-up'>Sign up</a></p>
+                  <button type="submit" className="button_submit" name="submit">Enter</button>
+              </form>
+            </div>
+            <footer>
+              <h2><span>My trips</span> diary</h2>
+            </footer>
         </div>
       );
       

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function SignUp(){
-    const [error,setError] = React.useState(null);
+    const [error,setError] = useState(null);
     const navigate = useNavigate()
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -30,17 +31,28 @@ export default function SignUp(){
 
 return (
         <div className="app-trips">
-            <form id="sign-up" onSubmit={onSubmit}>
-                <h1>Sign up</h1>
-                {/* <!-- <h2>Please enter a username and a password to make the sign-up!</h2> --> */}
-                <label htmlFor="email">Email*:</label>
-                <input type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Choose your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" title="Must contain at least one number and one special character, and 5-12 characters"/> 
-                <p>Are you already a user ? <a href='/'>Login</a></p>
-                <button type="submit" className="button_submit" name="submit">Create Account</button>
-                {error?<p>Password is not valid, insert at least 1 number and 1 symbol (! : ; )</p>:null}
-            </form>
+            <nav>
+                <h3>My trips <span>diary</span></h3>
+            </nav>
+            <div className='form'>
+                <form id="sign-up" onSubmit={onSubmit}>
+                    <h1>Sign up</h1>
+                    <div className = 'container-input'>
+                        <label htmlFor="email">Email*:</label>
+                        <input type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
+                    </div>
+                    <div className='container-input'>
+                        <label htmlFor="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Choose your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" /*title="Must contain at least one number and one special character, and 5-12 characters"*//> 
+                    </div>
+                    {error?<p>Password is not valid, insert at least 1 number and 1 symbol (! : ; )</p>:null}
+                    <p>Are you already a user ? <a href='/'>Login</a></p>
+                    <button type="submit" className="button_submit" name="submit">Create Account</button>
+                </form>
+            </div>
+            <footer>
+              <h2><span>My trips</span> diary</h2>
+            </footer>
         </div>
     );      
 };
