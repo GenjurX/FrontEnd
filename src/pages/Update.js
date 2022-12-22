@@ -59,8 +59,8 @@ async function  onSubmit(e) {
 
             <label> Days * </label>
                 <input className="secondHandInput" type = {'text'} name = 'days' placeholder="How many days?"></input>
-               <label className="labelUp ratingsLabel">Ratings</label>
-                <select className="secondHandInput lineUp select">
+               <label className="labelUp ratingsLabel" >Ratings</label>
+                <select className="secondHandInput lineUp select" name='reviews'>
                     <option value={'1'}>1</option>
                     <option value={'2'}>2</option>
                     <option value={'3'}>3</option>

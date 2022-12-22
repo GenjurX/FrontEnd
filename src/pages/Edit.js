@@ -28,6 +28,7 @@ export const Edit = () => {
             })
 
        const data = await response.json();
+       console.log(data)
         if (response.OK) {
             setSuccessEmail(data);
             }
@@ -96,7 +97,7 @@ export const Edit = () => {
       <form onSubmit={updatePassword} className='passwordForm'>
         <div className='flex-password'>
           <div className='flex-column-password'>
-           <label className='currentPass'>Current password</label>
+           <label className='currentPass'>Current password</label> 
            <input className='currentPass' type='text' name='currentPassword' placeholder='Insert current password' />
           </div>
           <div className='flex-column-password'>
