@@ -24,7 +24,7 @@ export default function LogIn(){
           window.localStorage.setItem("user_id", user_id);
           window.localStorage.setItem("password", password);
          
-          navigate('/Trips')
+          navigate('/trips')
           console.log(data);
           
           // setUser(data);
@@ -48,9 +48,9 @@ export default function LogIn(){
                   </div>
                   <div className='container-input'>
                     <label htmlFor="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Choose your password..." /> 
+                    <input type="password" id="password" name="password" placeholder="Choose your password..." required /> 
                   </div>
-                  {error?<p>Password is not valid, insert at least 1 number and 1 symbol (! : ; )</p>:null}
+                  {error?<p>{error}</p>:null}
                   <p>Are you already a user ? <a href='/sign-up'>Sign up</a></p>
                   <button type="submit" className="button_submit" name="submit">Enter</button>
               </form>
