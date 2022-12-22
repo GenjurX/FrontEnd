@@ -86,18 +86,18 @@ export const Edit = () => {
         <label className=''>Email</label>
         <input type='text' name='email' placeholder='john.doe@gmail.com' className='emailInput'/>
         <div className='right'>
-        <button type='submit'>Save</button>
+        <button type='submit' className='save-button1'>Save</button>
         </div>
       </form>
     </div>
     <div className='password'>
-      <h2>Security</h2>
-      <h3>Password</h3>
+      <h2>Security </h2>
+      <h5>Password</h5>
       <form onSubmit={updatePassword} className='passwordForm'>
         <div className='flex-password'>
           <div className='flex-column-password'>
-           <label>Current password</label>
-           <input type='text' name='currentPassword' placeholder='Insert current password' />
+           <label className='currentPass'>Current password</label>
+           <input className='currentPass' type='text' name='currentPassword' placeholder='Insert current password' />
           </div>
           <div className='flex-column-password'>
            <label>New Password</label>
@@ -105,7 +105,7 @@ export const Edit = () => {
           </div>
         </div>
         <div className='right'>
-        <button type='submit' >Save</button>
+        <button type='submit' className='save-button2' >Save</button>
         </div>
       </form>
     </div>

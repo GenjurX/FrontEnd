@@ -30,7 +30,7 @@ function Map() {
   return (
     <div>
        <div className="map-container">
-        <MapContainer center={[51.505, -0.09]} zoom={3} scrollWheelZoom={false}>
+        <MapContainer className="map-screen"  center={[51.505, -0.09]} zoom={3} scrollWheelZoom={false}>
           <TileLayer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
           {trips.map(({ lat, lon, destination, date, description, days, rating }, index) => (
             <Marker key={index} position={[lat, lon]} icon={marker}>

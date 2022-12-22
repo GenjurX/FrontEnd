@@ -138,14 +138,16 @@ margin-top: -0.4%;
 
 nav h1 {
   margin-left: 4%;
-  font-size: larger;
+  font-size:x-large;
   margin-top: 1.5%;
+  color: #000000;
+  font-weight: bold;
 }
 nav h1 span{
  color: grey; 
 }
 nav .myTrips{
-  margin-left: 75%;
+  margin-left: 70%;
   margin-top: 1.5%;
 }
 nav .svg{
@@ -180,12 +182,14 @@ color: grey;
 width: 15%;
 font-size: 18px;
 border-radius: 25%;
-border-color: rgb(213, 203, 203)
+border-color: rgb(213, 203, 203);
+z-index: 1;
 }
 
 .tripsDiaryPage .buttonContainer{
 margin-top: 5%;
 margin-left: 40%;
+z-index: 100;
 }
 .spanContainer{
 margin-top: 5%;
@@ -406,6 +410,12 @@ height: 3rem;
   border-radius: 25px;
 }
 
+.email h2{
+ font-weight: bold;
+ font-size: xx-large;
+ margin-left:5%;
+ margin-top: 2%;
+}
 
 .password {
   position: relative; 
@@ -426,24 +436,73 @@ height: 3rem;
   padding-left: 100px;
 }
 
-.emailInput {
-  margin-top: 5px;
-  margin-left: -100px;
-  width: 250px;
+.email .emailInput {
+  margin-top: 1%;
+  margin-left: -75%;
+  width: 400px;
 }
 
-.right {
- margin-top: 20px;
- text-align: right;
- justify-content: end;
+.email label{
+  margin-left: -101%;
+  margin-top: 2%;
 }
+
+.email .save-button1{
+  margin-left: 50rem;
+  padding: 1.5%;
+  width: 20%;
+  margin-top: 3%;
+  background-color: gray;
+  color: white;
+  border-radius: 10%;
+}
+.email .save-button1:hover{
+  background-color: green;
+  color: white;
+}
+
 .passwordForm {
   margin-top: 5px;
   margin-left: 20px;
   width: 200px;
 }
 
+.password{
+  height: 25rem;
+}
 
+.password h2{
+  font-weight: bold;
+  font-size: xx-large;
+  margin-left:5%;
+  margin-top: 2%;
+ }
+.password h5{
+  font-size: larger;
+  margin-left:5%;
+  margin-top: 3%;
+ }
+
+ .password .save-button2{
+  margin-left: 130rem;
+  padding: 0.65%;
+  width: 8%;
+  margin-top: -1%;
+  background-color: gray;
+  color: white;
+  border-radius: 10%;
+ }
+ .password .save-button2:hover{
+  background-color: green;
+  color: white;
+ }
+
+ .password label{
+  margin-left: 5%;
+  width: 150%;
+ }
+
+ 
 .text-red-center {
   margin-top: 10px;
   text-align: center;
@@ -453,21 +512,40 @@ height: 3rem;
 .flex-password {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 60px;
+  margin-top: -3%;
 }
 
+.flex-password .currentPass{
+  margin-left: 0%;
+}
 .flex-column-password {
-  display: flex;
   flex-direction: column;
   align-items: center;
   width: 250px;
+  margin-left: 40%;
+  margin-top: 10%;
 }
 
 .flex-column-password label {
   font-size: medium;
   font-weight: bold;
+  margin-top: -5%;
+  width: 55%;
+  margin-left: 150%;
 }
 .flex-column-password input {
-  width: 250px;
+  width: 530%;
   padding: 10px;
+  margin-top: 2%;
+  margin-left: 155%;
+  border-color: rgb(239, 225, 225);
 }
+
+.map-screen{
+ height: 60rem;
+ margin-top: -8.7%;
+ z-index: -1;
+ position: absolute;
+}
+
