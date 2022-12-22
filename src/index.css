@@ -544,15 +544,10 @@ height: 3rem;
   border-color: rgb(239, 225, 225);
 }
 
-<<<<<<< Updated upstream
-.map-screen{
- height: 60rem;
- margin-top: -8.9%;
- z-index: -1;
- position: absolute;
-}
 
-=======
+
+
+
 /*Popup*/
 
 .flex-colum {
@@ -577,4 +572,10 @@ height: 3rem;
  margin-top: 3px;
 
 }
->>>>>>> Stashed changes
+
+.map-screen{
+  height: 60rem;
+  margin-top: -8.9%;
+  z-index: -1;
+  position: absolute;
+ }
