@@ -542,6 +542,7 @@ height: 3rem;
   border-color: rgb(239, 225, 225);
 }
 
+<<<<<<< Updated upstream
 .map-screen{
  height: 60rem;
  margin-top: -8.7%;
@@ -549,3 +550,29 @@ height: 3rem;
  position: absolute;
 }
 
+=======
+/*Popup*/
+
+.flex-colum {
+  position: relative;
+  
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row; 
+}
+
+.days {
+  margin-left: 50px;
+}
+
+.elements {
+  display: flex;
+  flex-direction: column;
+ text-align: center;
+ margin-top: 3px;
+
+}
+>>>>>>> Stashed changes
