@@ -81,41 +81,42 @@ export const Edit = () => {
 
     <div>
     <Navbar />
-    <div className='email'>
-      <h2>Personal information</h2>
-      <form onSubmit={updateEmail} className='emailForm'>
-        <label className=''>Email</label>
-        <input type='text' name='email' placeholder='john.doe@gmail.com' className='emailInput'/>
-        <div className='right'>
-        <button type='submit' className='save-button1'>Save</button>
+    <div className="container w-75 bg-white mt-3 rounded p-3">
+      <h2 className='fw-bold'>Personal information</h2>
+      <form onSubmit={updateEmail} className='d-flex flex-column w-100'>
+        <label className=" my-2 fw-bold fs-6">Email</label>
+        <input className="p-2 w-50" type='text' name='email' placeholder='john.doe@gmail.com' />
+        <div className='d-flex justify-content-end my-3'>
+        <button type='submit' className='btn btn-secondary px-5'>Save</button>
         </div>
       </form>
     </div>
-    <div className='password'>
-      <h2>Security </h2>
-      <h5>Password</h5>
+    <div className="container w-75 bg-white mt-3 rounded p-3">
+      <h2 className='fw-bold'>Security</h2>
+      <h3 className='fw-bold'>Password</h3>
       <form onSubmit={updatePassword} className='passwordForm'>
-        <div className='flex-password'>
-          <div className='flex-column-password'>
-           <label className='currentPass'>Current password</label> 
-           <input className='currentPass' type='text' name='currentPassword' placeholder='Insert current password' />
+        <div className='d-flex gap-3 w-75'>
+          <div className='d-flex flex-column w-50'>
+           <label className=" my-2 fw-bold">Current password</label>
+           <input className="p-2" type='text' name='currentPassword' placeholder='Insert current password' />
           </div>
-          <div className='flex-column-password'>
-           <label>New Password</label>
-           <input type='text' name='newPassword' placeholder='Insert new password' />
+          <div className='d-flex flex-column w-50'>
+           <label className=" my-2 fw-bold">New Password</label>
+           <input className="p-2" type='text' name='newPassword' placeholder='Insert new password' />
           </div>
         </div>
-        <div className='right'>
-        <button type='submit' className='save-button2' >Save</button>
+        <div className='d-flex justify-content-end my-3'>
+        <button type='submit' className='btn btn-secondary px-5'>Save</button>
         </div>
       </form>
     </div>
-    <div className='text-red-center'>
+    <div className='text-center text-danger w-75 mx-auto bg-white'>
     {(successEmail) ? <p>You have successfully changed your email to: {successEmail}</p> : <p>{errorEmail}</p> }
     {(successPassword) ?<p>You have successfully changed your password to: {successPassword}</p> : <p>{errorPassword}</p>}
     </div>
     <Footer />
 </div>
+
 
   )
 }

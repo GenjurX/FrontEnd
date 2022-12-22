@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function SignUp(){
     const [error,setError] = useState(null);
@@ -30,29 +32,22 @@ export default function SignUp(){
      }
 
 return (
-        <div className="app-trips">
-            <nav>
-                <h3>My trips <span>diary</span></h3>
-            </nav>
-            <div className='form'>
-                <form id="sign-up" onSubmit={onSubmit}>
-                    <h1>Sign up</h1>
-                    <div className = 'container-input'>
-                        <label htmlFor="email">Email*:</label>
-                        <input type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
-                    </div>
-                    <div className='container-input'>
-                        <label htmlFor="password">Password:</label>
-                        <input type="password" id="password" name="password" placeholder="Choose your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" /*title="Must contain at least one number and one special character, and 5-12 characters"*//> 
-                    </div>
-                    {error?<p>Password is not valid, insert at least 1 number and 1 symbol (! : ; )</p>:null}
-                    <p>Are you already a user ? <a href='/'>Login</a></p>
-                    <button type="submit" className="button_submit" name="submit">Create Account</button>
-                </form>
-            </div>
-            <footer>
-              <h2><span>My trips</span> diary</h2>
-            </footer>
+    <div>
+        <Header />
+        <div className="container w-75 bg-white mt-3 rounded p-5">
+            <form id="sign-up" onSubmit={onSubmit} className="justify-content-center d-flex flex-column w-50 mx-auto">
+                <h1 className='mx-auto fw-bold'>Sign up</h1>
+                {/* <!-- <h2>Please enter a username and a password to make the sign-up!</h2> --> */}
+                <label htmlFor="email" className=" my-2 fw-bold fs-6">Email *</label>
+                <input className="p-2" type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
+                <label htmlFor="password" className=" mt-3 mb-2 fw-bold fs-6">Password:</label>
+                <input className="p-2" type="password" id="password" name="password" placeholder="Choose your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" title="Must contain at least one number and one special character, and 5-12 characters"/> 
+                {error?<p className="mt-3 fs-6 text-danger">{error}</p>:null}
+                <p className="mt-3 fs-6">Are you already a user ? <a href='/'>Login</a></p>
+                <button type="submit" className="mt-4 btn btn-dark fs-6" name="submit">Create Account</button>
+            </form>
         </div>
+        <Footer />  
+    </div>
     );      
 };

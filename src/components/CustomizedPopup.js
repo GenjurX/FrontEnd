@@ -12,17 +12,18 @@ const CustomizedPopup = ({destination, date,
       }
 
   return (
-    <div className='flex-column'>
-      <div className='flex-container'>
-        <span>{date}</span>
-        <span className='days'>{days}</span>
-      </div>
-      <div className='flex-column'>
-        <span  className='elements'>{destination}</span>
-        <span className='elements'>{description}</span>
-        <span className='elements'><Staring rating={rating}/></span>
-      </div>
+  <div>
+    <div className='d-flex justify-content-between'>
+      <span>{date}</span>
+      <span>{days} days</span>
     </div>
+    <div className='d-flex flex-column'>
+      <span className='text-center mt-1 fw-bold fs-5'>{destination}</span>
+      <span className='text-center mt-1'>{description}</span>
+      <span className='text-center mt-1'><Staring rating={rating}/></span>
+    </div>
+
+  </div>
   )
 }
 
