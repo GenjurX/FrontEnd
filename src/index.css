@@ -124,7 +124,6 @@ footer h2{
   height: 500px;
 }
 body{
-  background-color: rgb(217, 217, 234);
   height: fit-content;
   padding-bottom: 5%;
 }
@@ -188,12 +187,12 @@ z-index: 1;
 }
 
 .tripsDiaryPage .buttonContainer{
-margin-top: 5%;
+margin-top: 2.5%;
 margin-left: 40%;
 z-index: 100;
 }
 .spanContainer{
-margin-top: 5%;
+margin-top: 3%;
 margin-left: 10%;
 font-size: 200%;
 border: 1px solid grey;
@@ -208,25 +207,26 @@ padding-bottom: 1.5%;
   margin-left: 15%;
   color: black;
   font-weight: bold;
-  font-size: 80%;
+  font-size: 70%;
 }
 .spanContainer .newTrip{
   margin-left: 55%;
   background-color: rgb(191, 92, 92);
   color: white;
-  font-size: 50%;
+  font-size: 55%;
   padding: 10px;
   cursor: pointer;
+  margin-top: -7%;
 }
 
 table{
   margin-left: 5%;
   text-align: left;
-  margin-top: 1.5%;
+  margin-top: 0%;
   width: 85%;
 }
 td,th{
-    font-size: 50%;
+    font-size: 46.5%;
     color: rgb(27, 26, 26);
 }
 table th {
@@ -234,7 +234,7 @@ table th {
   padding-right: 50%;
   left: 30%;
   width: 26%;
-  padding-top: 1%;
+  padding-top: 4%;
   padding-bottom: 1%;
   text-align: left;
   border-bottom: 1px solid;
@@ -599,4 +599,174 @@ label {
 
 p {
   font-size: 14px;
+}
+
+
+
+svg{
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 25%;
+}
+
+.fw-bold{
+ padding-top: 2%;
+}
+
+.footer{
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.span{
+ color: grey;
+ font-size: 1.4rem;
+}
+.footerContainer{
+  background-color: rgb(44, 41, 41);
+}
+
+@media (max-width: 1550px) {
+  table{
+    margin-left: 5%;
+    text-align: left;
+    margin-top: 0%;
+    width: 85%;
+  }
+  td,th{
+      font-size: 43.5%;
+      color: rgb(27, 26, 26);
+  }
+  
+    
+    
+    .spanContainer .myTrips{
+      margin-left: 15%;
+      color: black;
+      font-weight: bold;
+      font-size: 60%;
+    }
+    .spanContainer .newTrip{
+      margin-left: 55%;
+      background-color: rgb(191, 92, 92);
+      color: white;
+      font-size: 50%;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: -7%;
+    }
+   
+     
+}
+
+@media (max-width: 1450px) {
+ 
+  td,th{
+    font-size: 34.5%;
+    color: rgb(27, 26, 26);
+}
+.fw-bold{
+  font-size: 80%;
+ }
+ .myTrips{
+  font-size: 60%;
+ }
+ svg{
+  margin-top: 1.5%;
+  cursor: pointer;
+  height: 20px;
+}
+.tripsDiaryPage .buttonContainer button{
+  margin-left: 20px;
+  padding: 12.5px;
+  padding-left: 35px;
+  padding-right: 35px;
+  cursor: pointer;
+  color: grey;
+  width: 17%;
+  font-size: 11px;
+  z-index: 1;
+  }
+  .spanContainer .myTrips{
+    margin-left: 15%;
+    color: black;
+    font-weight: bold;
+    font-size: 50%;
+  }
+  .spanContainer .newTrip{
+    margin-left: 55%;
+    background-color: rgb(191, 92, 92);
+    color: white;
+    font-size: 40%;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: -7%;
+  }
+}
+
+@media (max-width: 1250px) {
+
+  td,th{
+    font-size: 30.5%;
+    color: rgb(27, 26, 26);
+}
+.tripsDiaryPage .buttonContainer button{
+  width: 19%;
+  font-size: 9px;
+  }
+  .spanContainer .myTrips{
+    margin-left: 15%;
+    color: black;
+    font-weight: bold;
+    font-size: 45%;
+  }
+  .spanContainer .newTrip{
+    margin-left: 55%;
+    background-color: rgb(191, 92, 92);
+    color: white;
+    font-size: 35%;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: -7%;
+  }
+  svg{
+    margin-top: 1.5%;
+    cursor: pointer;
+    height: 18px;
+  }
+}
+
+@media (max-width: 1050px) {
+  td,th{
+    font-size: 24.5%;
+    color: rgb(27, 26, 26);
+}
+table{
+  padding-right: 5rem;
+}
+.spanContainer .myTrips{
+  margin-left: 15%;
+  color: black;
+  font-weight: bold;
+  font-size: 35%;
+}
+.spanContainer .newTrip{
+  margin-left: 55%;
+  background-color: rgb(191, 92, 92);
+  color: white;
+  font-size: 25%;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: -7%;
+}
+.tripsDiaryPage .buttonContainer button{
+  width: 20%;
+  font-size: 8px;
+  }
+  svg{
+    margin-top: 1.5%;
+    cursor: pointer;
+    height: 13px;
+    margin-left: 5px;
+  }
 }
