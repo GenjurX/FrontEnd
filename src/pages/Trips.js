@@ -3,7 +3,6 @@ import Map from "../components/Map";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Table from "../components/Table";
-//import './trips.css'
 
  function Trips(){
     const [ visibleTable,setVisibleTable] = useState(true);

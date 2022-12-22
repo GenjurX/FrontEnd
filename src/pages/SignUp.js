@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-export default function SignUp(){
+function SignUp(){
     const [error,setError] = useState(null);
     const navigate = useNavigate()
     const onSubmit = async (event) => {
@@ -14,7 +14,6 @@ export default function SignUp(){
         const email = formData.get("email");
         const password = formData.get("password");
         const values = { email, password };
-      
         const response = await fetch('http://localhost:4000/api/sign-up', {
             method: 'POST', headers: {
                 'Content-Type': 'application/json; charset=utf-8 '
@@ -29,15 +28,14 @@ export default function SignUp(){
         else {
              setError(data);
         }
-     }
+    }
 
-return (
-    <div>
+    return (
+        <div>
         <Header />
         <div className="container w-75 bg-white mt-3 rounded p-5">
             <form id="sign-up" onSubmit={onSubmit} className="justify-content-center d-flex flex-column w-50 mx-auto">
                 <h1 className='mx-auto fw-bold'>Sign up</h1>
-                {/* <!-- <h2>Please enter a username and a password to make the sign-up!</h2> --> */}
                 <label htmlFor="email" className=" my-2 fw-bold fs-6">Email *</label>
                 <input className="p-2" type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
                 <label htmlFor="password" className=" mt-3 mb-2 fw-bold fs-6">Password:</label>
@@ -48,6 +46,7 @@ return (
             </form>
         </div>
         <Footer />  
-    </div>
+        </div>
     );      
 };
+export default SignUp;
