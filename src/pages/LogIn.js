@@ -36,16 +36,16 @@ function LogIn(){
   return (
     <div>
     <Header />
-    <div className="container w-75 bg-white mt-3 rounded p-5">
+    <div className="container w-75 bg-white mt-3 rounded p-4">
     <form id="login" onSubmit={onSubmit} className="justify-content-center d-flex flex-column w-50 mx-auto">
       <h1 className='mx-auto fw-bold'>Login</h1>
-      <label htmlFor="email" className=" my-2 fw-bold fs-6">Email *</label>
+      <label htmlFor="email" className=" my-1 fw-bold fs-6">Email *</label>
       <input type="email" id="email" name="email" placeholder="Choose your email..." required className="p-2"/>
-      <label htmlFor='password' className=" mt-3 mb-2 fw-bold fs-6" >Password</label>
+      <label htmlFor='password' className=" mt-2 mb-1 fw-bold fs-6" >Password</label>
       <input type="password" id="password" name="password" placeholder="Choose your password..." required className="p-2"/>
-      {error?<p className="mt-3 fs-6 text-danger">{error} </p>:null}
-      <p className="mt-3 fs-6">You're not a user yet?<Link to="sign-up" className="fs-6"> Sign up</Link></p>
-      <button type="submit" name="submit" className="mt-4 btn btn-dark fs-6">Enter</button>
+      {error?<p className="mt-4 fs-6 text-danger">{error} </p>:null}
+      <p className="mt-4 fs-6">You're not a user yet?<Link to="sign-up" className="fs-6"> Sign up</Link></p>
+      <button type="submit" name="submit" className="mt-3 btn btn-dark fs-6">Enter</button>
     </form>
     </div>
     <Footer />

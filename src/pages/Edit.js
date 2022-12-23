@@ -69,7 +69,7 @@ function Edit() {
 
     <div>
     <Navbar />
-    <div className="container w-75 bg-white mt-3 rounded p-2">
+    <div className="container w-75 bg-white mt-3 rounded py-1 px-5">
       <h2 className='fw-bold'>Personal information</h2>
       <form onSubmit={updateEmail} className='d-flex flex-column w-100'>
         <label className=" my-2 fw-bold fs-6">Email</label>
@@ -79,7 +79,7 @@ function Edit() {
         </div>
       </form>
     </div>
-    <div className="container w-75 bg-white mt-3 rounded p-2">
+    <div className="container w-75 bg-white mt-3 rounded py-1 px-5">
       <h2 className='fw-bold'>Security</h2>
       <h3 className='fw-bold'>Password</h3>
       <form onSubmit={updatePassword} className='passwordForm'>

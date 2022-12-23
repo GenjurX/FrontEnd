@@ -33,16 +33,16 @@ function SignUp(){
     return (
         <div>
         <Header />
-        <div className="container w-75 bg-white mt-3 rounded p-5">
+        <div className="container w-75 bg-white mt-3 rounded p-4">
             <form id="sign-up" onSubmit={onSubmit} className="justify-content-center d-flex flex-column w-50 mx-auto">
                 <h1 className='mx-auto fw-bold'>Sign up</h1>
-                <label htmlFor="email" className=" my-2 fw-bold fs-6">Email *</label>
+                <label htmlFor="email" className=" my-1 fw-bold fs-6">Email *</label>
                 <input className="p-2" type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
-                <label htmlFor="password" className=" mt-3 mb-2 fw-bold fs-6">Password:</label>
+                <label htmlFor="password" className=" mt-2 mb-1 fw-bold fs-6">Password</label>
                 <input className="p-2" type="password" id="password" name="password" placeholder="Choose your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" title="Must contain at least one number and one special character, and 5-12 characters"/> 
-                {error?<p className="mt-3 fs-6 text-danger">{error}</p>:null}
-                <p className="mt-3 fs-6">Are you already a user ? <Link to='/'>Log in</Link></p>
-                <button type="submit" className="mt-4 btn btn-dark fs-6" name="submit">Create Account</button>
+                {error?<p className="mt-4 fs-6 text-danger">{error}</p>:null}
+                <p className="mt-4 fs-6">Are you already a user ? <Link to='/'>Log in</Link></p>
+                <button type="submit" className="mt-3 btn btn-dark fs-6" name="submit">Create Account</button>
             </form>
         </div>
         <Footer />  
