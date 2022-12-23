@@ -57,7 +57,7 @@ function Edit() {
             setErrorPassword(data);
           }
         } 
-        else if (password === currentPassword) {
+        else if (password === currentPassword && currentPassword.length != 0) {
           setErrorPassword(`The new password can't be the same as current password!`);
         }
         else {
