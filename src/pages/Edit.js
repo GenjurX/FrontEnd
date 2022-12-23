@@ -74,7 +74,7 @@ function Edit() {
       <form onSubmit={updateEmail} className='d-flex flex-column w-100'>
         <label className=" my-2 fw-bold fs-6">Email</label>
         <input className="p-1 w-50" type='text' name='email' placeholder='john.doe@gmail.com' />
-        <div className='d-flex justify-content-end my-3'>
+        <div className='d-flex justify-content-end my-2'>
         <button type='submit' className='btn btn-secondary px-5'>Save</button>
         </div>
       </form>
@@ -93,7 +93,7 @@ function Edit() {
            <input className="p-1" type='password' name='newPassword' placeholder='Insert new password' />
           </div>
         </div>
-        <div className='d-flex justify-content-end my-3'>
+        <div className='d-flex justify-content-end my-2'>
         <button type='submit' className='btn btn-secondary px-5'>Save</button>
         </div>
       </form>
