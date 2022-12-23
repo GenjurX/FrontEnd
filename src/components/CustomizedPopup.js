@@ -13,7 +13,7 @@ const CustomizedPopup = ({destination, date,
 
   return (
   <div>
-    <div className='d-flex justify-content-between'>
+    <div className='d-flex justify-content-between gap-2'>
       <span>{date}</span>
       <span>{days} days</span>
     </div>

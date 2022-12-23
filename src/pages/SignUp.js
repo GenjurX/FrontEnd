@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -41,7 +41,7 @@ function SignUp(){
                 <label htmlFor="password" className=" mt-3 mb-2 fw-bold fs-6">Password:</label>
                 <input className="p-2" type="password" id="password" name="password" placeholder="Choose your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" title="Must contain at least one number and one special character, and 5-12 characters"/> 
                 {error?<p className="mt-3 fs-6 text-danger">{error}</p>:null}
-                <p className="mt-3 fs-6">Are you already a user ? <a href='/'>Login</a></p>
+                <p className="mt-3 fs-6">Are you already a user ? <Link to='/'>Log in</Link></p>
                 <button type="submit" className="mt-4 btn btn-dark fs-6" name="submit">Create Account</button>
             </form>
         </div>

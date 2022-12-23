@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -44,7 +44,7 @@ function LogIn(){
       <label htmlFor='password' className=" mt-3 mb-2 fw-bold fs-6" >Password</label>
       <input type="password" id="password" name="password" placeholder="Choose your password..." required className="p-2"/>
       {error?<p className="mt-3 fs-6 text-danger">{error} </p>:null}
-      <p className="mt-3 fs-6">You're not a user yet?<a href="sign-up" className="fs-6"> Sign up</a></p>
+      <p className="mt-3 fs-6">You're not a user yet?<Link to="sign-up" className="fs-6"> Sign up</Link></p>
       <button type="submit" name="submit" className="mt-4 btn btn-dark fs-6">Enter</button>
     </form>
     </div>
