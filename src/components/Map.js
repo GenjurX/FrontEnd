@@ -20,7 +20,6 @@ function Map() {
     async function fetchTrips () {
         const response = await fetch(`http://localhost:4000/api/${user_id}/trips`);
         const data = await response.json();
-        console.log(data);
         setTrips(data);
     }
     fetchTrips();

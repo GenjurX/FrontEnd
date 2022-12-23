@@ -4,39 +4,44 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-export const Edit = () => {  
-  const [errorEmail, setErrorEmail] = useState(false);
-  const [errorPassword, setErrorPassword] = useState(false);
-  const [successEmail, setSuccessEmail] = useState('');
-  const [successPassword, setSuccesPassword] = useState('');
-  const id = localStorage.getItem('user_id');
-  const passwordLogedin = localStorage.getItem('password');
 
-  const updateEmail = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const email = formData.get("email");
-    const value = {email};
-    try {
-      const response = await fetch(`http://localhost:4000/api/email/${id}`, {
-        method:'PUT', headers: {
-         'Content-Type': 'application/json'
-        }, body: JSON.stringify(value)
-    })
-    const data = await response.json();
-    console.log(data)
-    if (response.OK) {
-      setSuccessEmail(data);
-    }
-    else {
-      setErrorEmail(data);
-    } 
-    }
-    catch (err) {
-      setErrorEmail( err.message );
-    }
-  }
+
+ const Edit =  () => {
+    
+    const [errorEmail, setErrorEmail] = useState(false);
+    const [errorPassword, setErrorPassword] = useState(false);
+    const [successEmail, setSuccessEmail] = useState('');
+    const [successPassword, setSuccesPassword] = useState('');
+    const id = localStorage.getItem('user_id');
+    const passwordLogedin = localStorage.getItem('password');
+
+    const updateEmail = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const email = formData.get("email");
+        const value = {email};
+        try {
+            const response = await fetch(`http://localhost:4000/api/email/${id}`, {
+                method:'PUT', headers: {
+                    'Content-Type': 'application/json'
+                }, body: JSON.stringify(value)
+            })
+
+       const data = await response.json();
+        if (response.OK) {
+            setSuccessEmail(data);
+            }
+        else {
+            setErrorEmail(data);
+          } 
+        }
+        catch (err) {
+            setErrorEmail( err.message );
+        }
+
+
+  
 
   const updatePassword = async (e) => {
     e.preventDefault();
@@ -110,6 +115,6 @@ export const Edit = () => {
     <Footer />
    </div>
   )
-}
+}}
 
-export default Edit;
+export default Edit

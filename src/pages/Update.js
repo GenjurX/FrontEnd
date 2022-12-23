@@ -34,6 +34,8 @@ async function  onSubmit(e) {
     } 
     else{
         setCountryNotFound(true)
+        setLat('');
+        setLon('');
     }
     const values = {date,destination,days,user_id,rating,lat ,lon,description}
     const response = await fetch(`http://localhost:4000/api/trip/${id_trip}`, {
