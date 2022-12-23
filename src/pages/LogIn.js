@@ -44,7 +44,7 @@ function LogIn(){
             <label htmlFor='password' className=" mt-2 mb-1 fw-bold fs-6" >Password</label>
             <input type="password" id="password" name="password" placeholder="Choose your password..." required className="p-2"/>
             {error?<p className="mt-4 fs-6 text-danger">{error} </p>:null}
-            <p className="mt-4 fs-6">You're not a user yet?<Link to="sign-up" className="fs-6"> Sign up</Link></p>
+            <p className="mt-3 fs-6">You're not a user yet?<Link to="sign-up" className="fs-6"> Sign up</Link></p>
             <button type="submit" name="submit" className="mt-3 btn btn-dark fs-6">Enter</button>
           </form>
         </div>
