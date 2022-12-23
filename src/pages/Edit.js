@@ -26,7 +26,7 @@ function Edit() {
         }, body: JSON.stringify(value)
       })
       const data = await response.json();
-        if (response.OK) {
+        if (response.ok) {
           alert('Email updated succesfully!');
           //setSuccessEmail(data);
         }
@@ -50,7 +50,7 @@ function Edit() {
           },body: JSON.stringify(value)
         })
         const data = await response.json();
-          if (response.OK) {
+          if (response.ok) {
             alert('Password updated succesfully!');
             console.log(data);
             //setSuccesPassword(data);
