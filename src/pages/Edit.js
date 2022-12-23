@@ -8,10 +8,9 @@ function Edit() {
     
     const [errorEmail, setErrorEmail] = useState(false);
     const [errorPassword, setErrorPassword] = useState(false);
-    //const [successEmail, setSuccessEmail] = useState('');
-    //const [successPassword, setSuccesPassword] = useState('');
-    const id = localStorage.getItem('user_id');
-    const passwordLogedin = localStorage.getItem('password');
+
+    const id = window.localStorage.getItem('user_id');
+    const passwordLogedin = window.localStorage.getItem('password');
 
     async function updateEmail(e) {
       e.preventDefault();
@@ -28,7 +27,6 @@ function Edit() {
       const data = await response.json();
         if (response.ok) {
           alert('Email updated succesfully!');
-          //setSuccessEmail(data);
         }
         else {
           setErrorEmail(data);
@@ -43,7 +41,7 @@ function Edit() {
       const password = formData.get("newPassword");
       const value = {password};
         
-      if (currentPassword === passwordLogedin) {
+      if ((currentPassword === passwordLogedin) && (password != currentPassword)) {
         const response = await fetch(`http://localhost:4000/api/password/${id}`, {
           method:'PUT', headers: {
             'Content-Type': 'application/json'
@@ -53,13 +51,15 @@ function Edit() {
           if (response.ok) {
             alert('Password updated succesfully!');
             console.log(data);
-            //setSuccesPassword(data);
           }
           else {
             console.log(data);
             setErrorPassword(data);
           }
         } 
+        else if (password === currentPassword) {
+          setErrorPassword(`The new password can't be the same as current password!`);
+        }
         else {
             setErrorPassword(`This is not your current password. Please try again!`);
            }
@@ -69,28 +69,28 @@ function Edit() {
 
     <div>
     <Navbar />
-    <div className="container w-75 bg-white mt-3 rounded p-3">
+    <div className="container w-75 bg-white mt-3 rounded p-2">
       <h2 className='fw-bold'>Personal information</h2>
       <form onSubmit={updateEmail} className='d-flex flex-column w-100'>
         <label className=" my-2 fw-bold fs-6">Email</label>
-        <input className="p-2 w-50" type='text' name='email' placeholder='john.doe@gmail.com' />
+        <input className="p-1 w-50" type='text' name='email' placeholder='john.doe@gmail.com' />
         <div className='d-flex justify-content-end my-3'>
         <button type='submit' className='btn btn-secondary px-5'>Save</button>
         </div>
       </form>
     </div>
-    <div className="container w-75 bg-white mt-3 rounded p-3">
+    <div className="container w-75 bg-white mt-3 rounded p-2">
       <h2 className='fw-bold'>Security</h2>
       <h3 className='fw-bold'>Password</h3>
       <form onSubmit={updatePassword} className='passwordForm'>
         <div className='d-flex gap-3 w-75'>
           <div className='d-flex flex-column w-50'>
-           <label className=" my-2 fw-bold">Current password</label>
-           <input className="p-2" type='text' name='currentPassword' placeholder='Insert current password' />
+           <label className=" my-1 fw-bold " style = {{fontSize:'14px'}}>Current password</label>
+           <input className="p-1" type='password' name='currentPassword' placeholder='Insert current password' />
           </div>
           <div className='d-flex flex-column w-50'>
-           <label className=" my-2 fw-bold">New Password</label>
-           <input className="p-2" type='text' name='newPassword' placeholder='Insert new password' />
+           <label className=" my-1 fw-bold" style = {{fontSize:'14px'}}>New Password</label>
+           <input className="p-1" type='password' name='newPassword' placeholder='Insert new password' />
           </div>
         </div>
         <div className='d-flex justify-content-end my-3'>
