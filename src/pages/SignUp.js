@@ -39,7 +39,7 @@ function SignUp(){
                     <label htmlFor="email" className=" my-1 fw-bold fs-6">Email *</label>
                     <input className="p-2" type="email" id="email" name="email" placeholder="Choose your email..." minLength="5" maxLength="20"  required />
                     <label htmlFor="password" className=" mt-2 mb-1 fw-bold fs-6">Password</label>
-                    <input className="p-2" type="password" id="password" name="password" placeholder="Choose your password..." pattern="(?=.*\d)(?=.*[!?.:]).{5,12}" title="Must contain at least one number and one special character, and 5-12 characters"/> 
+                    <input className="p-2" type="password" id="password" name="password" placeholder="Choose your password..." /> 
                     {error?<p className="mt-4 fs-6 text-danger">{error}</p>:null}
                     <p className="mt-4 fs-6">Are you already a user ? <Link to='/'>Log in</Link></p>
                     <button type="submit" className="mt-3 btn btn-dark fs-6" name="submit">Create Account</button>
