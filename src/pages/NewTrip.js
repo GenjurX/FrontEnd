@@ -4,8 +4,8 @@ import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 
 function NewTrip(){
-    const [ latitude, setLatitude ] = useState('');
-    const [ longitude, setLongitude ] = useState('');
+    const [ latitude, setLatitude ] = useState ('');
+    const [ longitude, setLongitude ] = useState ('');
     const [countryNotFound, setCountryNotFound] = useState(false)
     const navigate = useNavigate()
     let lat = '';
@@ -35,8 +35,9 @@ async function onSubmit(e) {
     } 
     else{
         setCountryNotFound(true)
-        setLatitude('');
-        setLongitude('');
+        setLatitude ('');
+        setLongitude ('');
+
     }
     const values = {date,destination,days,user_id,rating,lat ,lon, description}
     const response = await fetch(`http://localhost:4000/api/trip`, {
@@ -82,16 +83,16 @@ async function onSubmit(e) {
                 <div className='row  mt-2 my-auto'>
                     <div className='col-6 d-flex flex-column'>
                         <label className='mb-1'> Lat * </label>
-                        <input style={{background:'grey',color:"white"}}  className="p-1" type = {'text'} name = 'latitude' defaultValue= {`${latitude}`} placeholder="Lat"></input>
+                        <input style={{background:'grey',color:"white"}}  className="p-1" type = {'text'} name = 'latitude' defaultValue= {`${latitude}`} placeholder="Lat" readOnly></input>
                     </div>
                     <div className=' col-6 d-flex flex-column'>
                         <label className="mb-1"> Long * </label>
-                        <input style={{background:'grey',color:"white"}}  className="p-1" type = {'text'} name = 'longitude' defaultValue= {`${longitude}`}  placeholder="Lon"></input>
+                        <input style={{background:'grey',color:"white"}}  className="p-1" type = {'text'} name = 'longitude' defaultValue= {`${longitude}`}  placeholder="Lon" readOnly></input>
                     </div>
                 </div>     
                 <div className='d-flex mt-3 mx-auto gap-3'>
                     <button className="px-3 py-1 rounded" type={"button"} onClick={onCancel}>Cancel</button>
-                    <button className="btn btn-dark px-5 py-1 rounded text-white" type ={'submit'}>Create</button> 
+                    <button className="btn btn-dark px-5 py-1 rounded text-white" type ={'submit'} >Create</button> 
                 </div> 
             </form>
         </div>

@@ -1,6 +1,15 @@
 body {
   font-family: Verdana;
 }
+.newTrip{
+  margin-left: 55%;
+  background-color: rgb(191, 92, 92);
+  color: white;
+  font-size: 55%;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: -7%;
+}
 /*
 .app-trips{
   position: absolute;

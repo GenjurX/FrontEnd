@@ -6,11 +6,8 @@ import L from 'leaflet';
 
 
 function Map() {
-
-
   const [trips, setTrips] = React.useState([]);
   const user_id = localStorage.getItem('user_id');
-
   const marker = L.icon ({
     iconUrl: require('./redMarker.png'),
     iconSize:  [25, 25]
@@ -24,7 +21,6 @@ function Map() {
     }
     fetchTrips();
   }, []);
-
 
   return (
     <div>
