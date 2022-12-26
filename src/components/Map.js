@@ -21,7 +21,7 @@ function Map() {
     }
     fetchTrips();
   }, []);
-
+ 
   return (
     <div>
        <div className="map-container">
