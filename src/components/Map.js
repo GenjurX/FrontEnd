@@ -24,16 +24,12 @@ function Map() {
     }
     fetchTrips();
   }, []);
-<<<<<<< Updated upstream
  
-=======
-
   const navigate = useNavigate();
     function newTrip(){
       navigate('/newTrip'); 
     }
 
->>>>>>> Stashed changes
   return (
     <div className="position-relative">
        <div className="map-container">
