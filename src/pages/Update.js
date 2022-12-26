@@ -100,11 +100,11 @@ console.log(trip)
                     <div className='row  mt-2 my-auto'>
                         <div className='col-6 d-flex flex-column'>
                             <label className="mb-1"> Lat * </label>
-                            <input style={{background:'grey',color:"white"}} className="p-1" type = {'text'} name = 'latitude' defaultValue= {`${latitude}`} placeholder="Lat" readOnly></input>
+                            <input style={{background:'rgb(206, 200, 192)',color:"white"}} className="p-1" type = {'text'} name = 'latitude' defaultValue= {`${latitude}`} placeholder="Lat" readOnly></input>
                         </div>
                         <div className=' col-6 d-flex flex-column'>
                             <label className="mb-1"> Long * </label>
-                            <input style={{background:'grey',color:"white"}} className="p-1" type = {'text'} name = 'longitude' defaultValue= {`${longitude}`}  placeholder="Lon" readOnly></input>
+                            <input style={{background:'rgb(206, 200, 192)',color:"white"}} className="p-1" type = {'text'} name = 'longitude' defaultValue= {`${longitude}`}  placeholder="Lon" readOnly></input>
                         </div>
                     </div>     
                     <div className='d-flex mt-3 mx-auto gap-3'>
