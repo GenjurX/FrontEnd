@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'
 
 const CustomizedPopup = ({destination, date, 
     days, description, rating}) => {
@@ -11,15 +10,10 @@ const CustomizedPopup = ({destination, date,
       }
         return style;
     }
-    const navigate = useNavigate();
-    function newTrip(){
-      navigate( '/newTrip' ) 
-    }
-
-
+    
   return (
   <div>
-    <div className='d-flex justify-content-between gap-2'>
+    <div className='d-flex justify-content-between'>
       <span>{date}</span>
       <span>{days} days</span>
     </div>
@@ -28,7 +22,6 @@ const CustomizedPopup = ({destination, date,
       <span className='text-center mt-1'>{description}</span>
       <span className='text-center mt-1'><Staring rating={rating}/></span>
     </div>
-    <span onClick={newTrip} className="newTrip">New Trip</span> 
   </div>
   )
 }

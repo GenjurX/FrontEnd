@@ -10,7 +10,7 @@ function Edit() {
     const [errorPassword, setErrorPassword] = useState(false);
 
     const id = window.localStorage.getItem('user_id');
-    const passwordLogedin = window.localStorage.getItem('password');
+    const passwordLoggedIn = window.localStorage.getItem('password');
 
     async function updateEmail(e) {
       e.preventDefault();
@@ -46,7 +46,7 @@ function Edit() {
       const password = formData.get("newPassword");
       const value = {password};
         
-      if ((currentPassword === passwordLogedin) && (password !== currentPassword)) {
+      if (currentPassword === passwordLoggedIn && password !== currentPassword) {
         const response = await fetch(`http://localhost:4000/api/password/${id}`, {
           method:'PUT', headers: {
             'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ function Edit() {
             setErrorPassword(data);
           }
         } 
-        else if (password === currentPassword && currentPassword === passwordLogedin ) {
+        else if (password === currentPassword && currentPassword === passwordLoggedIn ) {
           setErrorPassword(`The new password can't be the same as current password!`);
         }
         else {
