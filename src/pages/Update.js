@@ -69,42 +69,43 @@ console.log(trip)
             <h2 style ={{fontSize:'1.5rem'}} className='fw-bold text-center mt-3'>Update Trip #{id_trip}</h2>
             <div className="text-center mx-auto my-1 py-1 text-danger border border-danger w-50">You must fill all the mandatory list</div>
             {trip.map((trip,i)=>{
-            return(<form key={i} onSubmit = { onSubmit } id ='form' className='d-flex flex-column w-75 mx-auto'>
+            return(
+                    <form key={i} onSubmit = { onSubmit } id ='form' className='d-flex flex-column w-75 mx-auto'>
                     <label className='mb-1'> Date * </label>
                     <input className='p-1' type = {'text'} onFocus={
-    (e)=> {
-      e.currentTarget.type = "date";
-      e.currentTarget.focus();
-     }
-   } name = 'date' placeholder={`${trip.date}`} required></input>
+                     (e)=> {
+                     e.currentTarget.type = "date";
+                     e.currentTarget.focus();
+                    }
+                    } name = 'date' placeholder={`${trip.date}`} required></input>
                     <label className='mt-2 mb-1'> Destination *  </label>
                     <input className='p-1' type = {'text'} name = 'destination' placeholder={`${trip.destination}`} required></input>
                     <label className='mt-2 mb-1'> Description * </label>
                     <input className='px-2 py-3' type = {'text-area'} name = 'description' placeholder={`${trip.description}`} required></input>
                     <div className='row  mt-2 align-middle'>
-                        <div className='col-6 d-flex flex-column'>
-                            <label className="mb-1"> Days * </label>
-                            <input className="p-1" type = {'number'} name = 'days' placeholder={`${trip.days}`} required></input>
-                        </div>
+                    <div className='col-6 d-flex flex-column'>
+                    <label className="mb-1"> Days * </label>
+                        <input className="p-1" type = {'number'} name = 'days' placeholder={`${trip.days}`} required></input>
+                     </div>
                         <div className='col-6 d-flex flex-column'>
                             <label className="mb-1">Rating *</label>
-                            <select className=" py-2" name='reviews' placeholder={`${trip.rating}`} required>
+                             <select className=" py-2" name='reviews' required>
                                 <option value={'1'}>1</option>
                                 <option value={'2'}>2</option>
                                 <option value={'3'}>3</option>
                                 <option value={'4'}>4</option>
                                 <option value={'5'}>5</option>
                             </select>
-                        </div>      
-                    </div>
-                    <div className='row  mt-2 my-auto'>
+                          </div>      
+                       </div>
+                     <div className='row  mt-2 my-auto'>
                         <div className='col-6 d-flex flex-column'>
                             <label className="mb-1"> Lat * </label>
-                            <input style={{background:'rgb(206, 200, 192)',color:"white"}} className="p-1" type = {'text'} name = 'latitude' defaultValue= {`${latitude}`} placeholder="Lat" readOnly></input>
+                            <input style={{background:'rgb(206, 200, 192)',color:"blue"}} className="p-1" type = {'text'} name = 'latitude' defaultValue= {`${latitude}`} placeholder="Lat" readOnly></input>
                         </div>
                         <div className=' col-6 d-flex flex-column'>
                             <label className="mb-1"> Long * </label>
-                            <input style={{background:'rgb(206, 200, 192)',color:"white"}} className="p-1" type = {'text'} name = 'longitude' defaultValue= {`${longitude}`}  placeholder="Lon" readOnly></input>
+                            <input style={{background:'rgb(206, 200, 192)',color:"blue"}} className="p-1" type = {'text'} name = 'longitude' defaultValue= {`${longitude}`}  placeholder="Lon" readOnly></input>
                         </div>
                     </div>     
                     <div className='d-flex mt-3 mx-auto gap-3'>
