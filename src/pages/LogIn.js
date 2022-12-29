@@ -7,6 +7,17 @@ import Footer from "../components/Footer";
 function LogIn(){
   const [error,setError] = useState(null);
   const navigate = useNavigate()
+  const user_id = localStorage.getItem('user_id');
+  
+  React.useEffect(() => {
+      function idExistDuringBackSWardsButton () {
+          if(user_id){
+            navigate('/trips')
+          }
+        }
+      idExistDuringBackSWardsButton ()
+  }, []);
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;

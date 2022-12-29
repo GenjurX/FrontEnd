@@ -7,10 +7,20 @@ function NewTrip(){
     const [ latitude, setLatitude ] = useState ('');
     const [ longitude, setLongitude ] = useState ('');
     const [countryNotFound, setCountryNotFound] = useState(false)
+    const user_id = localStorage.getItem('user_id');
     const navigate = useNavigate()
     let lat = '';
     let lon = '';
      
+    React.useEffect(() => {
+        function idDoesNotExistDuringBackSWardsButton () {
+            if(!user_id){
+              navigate('/')
+            }
+          }
+        idDoesNotExistDuringBackSWardsButton ()
+    }, []);
+
 async function onSubmit(e) {
     e.preventDefault()
     const user_id = localStorage.getItem ( 'user_id' );
@@ -30,8 +40,8 @@ async function onSubmit(e) {
         lon = cordinates[ 0 ].lon;
         setLatitude( lat );
         setLongitude( lon );
-        setCountryNotFound(false)
-        alert ('Your trip has been Created')
+        setCountryNotFound( false )
+        alert ( 'Your trip has been Created' )
     } 
     else{
         setCountryNotFound(true)

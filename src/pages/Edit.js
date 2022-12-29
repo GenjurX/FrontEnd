@@ -2,15 +2,24 @@ import React from 'react';
 import { useState} from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
+import { useNavigate, Link } from "react-router-dom";
 
 function Edit() {
     
     const [errorEmail, setErrorEmail] = useState(false);
     const [errorPassword, setErrorPassword] = useState(false);
-
+    const navigate = useNavigate()
     const id = window.localStorage.getItem('user_id');
     const passwordLoggedIn = window.localStorage.getItem('password');
+    
+    React.useEffect(() => {
+      function idDoesNotExistDuringBackSWardsButton () {
+          if(!id){
+            navigate('/')
+          }
+        }
+      idDoesNotExistDuringBackSWardsButton ()
+  }, []);
 
     async function updateEmail(e) {
       e.preventDefault();
