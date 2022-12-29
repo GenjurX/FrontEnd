@@ -63,8 +63,8 @@ function Edit() {
         })
         const data = await response.json();
           if (response.ok) {
+            window.localStorage.setItem('password', password);
             alert('Password updated succesfully!');
-            console.log(data);
           }
           else {
             console.log(data);
